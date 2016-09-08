@@ -6,14 +6,14 @@ from subprocess import call
 import sys
 import re
 import os
-
+import re
 
 if __name__ == "__main__":
 	# Get file name	
 	try:
 		fileName = sys.argv[1]
 	except:
-		print "Missing file name!"
+		print "Missing file name"
 		sys.exit(0)
 
 	# Read file
@@ -22,37 +22,43 @@ if __name__ == "__main__":
 			links = f.readlines()
 		links = [line.rstrip('\n') for line in links]
 		
+		# Create dir to download files
+		try:
+			print "Creating dir data/\n"
+			os.system("mkdir -p data")
+			# call(["mkdir", "-p", "data"])
+		except Exception, e:
+			raise e
+			sys.exit(0)
+
 		# Download files
 		# print "Downloading links: ", links
 		for link in links:
 			try:
-				print ""
-				# print "Downloading urls..."
-				# Create dir to download file
-				# d = link.replace("https://", "")
-				# call(["mkdir", "-p", d])
-				# call(["mkdir", "-p", "data"])
-				
-				# Dá pra parsear o arquivo para renomeá-lo (ruim)
-				# linkName = link.replace("//", "")
-				# print linkName + "\n"
+				# Download url index HTML
+				print "Dowloading HTML content"
+				os.system("wget -O data/index.html -q " + link)
 
-				# call(["wget", link])
-				# call(["wget", "-qO-", "http://globoesporte.globo.com/futebol/futebol-internacional/jogo/06-09-2016/suica-portugal/", "|", "grep", "-iPo", "(?<=<title>)(.*)(?=</title>)"])
+			# Exception in case that could not download HTML
+			except Exception, e:
+				raise e
+				print "Could not create dir and/or download file"
 
-				cmd = "wget -qO- " + link + " | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si'"
-				# linkName = os.system(cmd)
+			# Parse HTML file to extract title
+			with open('data/index.html', 'r') as myfile:
+				html = myfile.read().replace('\n', '')
+			
+			# Title
+			regex = re.compile('<title>(.*?)</title>', re.IGNORECASE|re.DOTALL)
+			title = regex.search(html).group(1)
+			print title + "\n"
 
-				p1 = subprocess.Popen(["wget", "-qO-", link], stdout=subprocess.PIPE)
-				p2 = subprocess.Popen(["perl", "-l", "-0777", "-ne", "'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si'"], stdin=p1.stdout, stdout=subprocess.PIPE)
-				p2.communicate()
-
-			# Exception in case that could not download file
-			except:
-				print "Could not create dir and/or download file!"
-
-		# Write the parser here
+			# 
+			regex = re.compile('<body(.*?)</body>', re.IGNORECASE|re.DOTALL)
+			body = regex.search(html).group(1)
+			print body + "\n"
 
 	# Éxception in case that could not open file
-	except:
-		print "Could not open file", "\""+fileName+"\"!"
+	except Exception, e:
+		raise e
+		sys.exit(0)
