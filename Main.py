@@ -6,7 +6,6 @@ from subprocess import call
 import sys
 import re
 import os
-import re
 
 if __name__ == "__main__":
 	# Get file name	
@@ -24,9 +23,9 @@ if __name__ == "__main__":
 		
 		# Create dir to download files
 		try:
-			print "Creating dir data/\n"
+			print "\n========== STARTING ==========\n"
+			print "Creating dir \"data\""
 			os.system("mkdir -p data")
-			# call(["mkdir", "-p", "data"])
 		except Exception, e:
 			raise e
 			sys.exit(0)
@@ -36,8 +35,10 @@ if __name__ == "__main__":
 		for link in links:
 			try:
 				# Download url index HTML
-				print "Dowloading HTML content"
+				print "\n========== URL ==========\n"
+				print "Dowloading url content from \"" + link + "\""
 				os.system("wget -O data/index.html -q " + link)
+				os.system("lynx -dump data/index.html -nolist > data/index.html.txt")
 
 			# Exception in case that could not download HTML
 			except Exception, e:
@@ -49,14 +50,24 @@ if __name__ == "__main__":
 				html = myfile.read().replace('\n', '')
 			
 			# Title
+			print "\n========== TITLE ==========\n"
 			regex = re.compile('<title>(.*?)</title>', re.IGNORECASE|re.DOTALL)
 			title = regex.search(html).group(1)
-			print title + "\n"
+			print title
 
-			# 
+			# Body with tags
 			regex = re.compile('<body(.*?)</body>', re.IGNORECASE|re.DOTALL)
-			body = regex.search(html).group(1)
-			print body + "\n"
+			bodyWithTags = regex.search(html).group(1)
+
+			# Also working
+			# regex = re.compile('<.*?>')
+			# body = re.sub(regex,'', bodyWithTags)
+
+			# Body without tags
+			print "\n========== BODY ==========\n"
+			body = re.sub('<.*?>', '', bodyWithTags)
+			body = ' '.join(body.split())
+			print body
 
 	# Éxception in case that could not open file
 	except Exception, e:
