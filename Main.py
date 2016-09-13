@@ -22,8 +22,8 @@ if __name__ == "__main__":
 		
 		# Create dir to download files
 		try:
-			# print "\n========== STARTING ==========\n"
-			# print "Creating dir \"data\""
+			print "\n========== STARTING ==========\n"
+			print "Creating dir \"data\""
 			os.system("mkdir -p data")
 		except Exception, e:
 			raise e
@@ -32,9 +32,9 @@ if __name__ == "__main__":
 		# Download files and parse the strings to get title and body
 		for url in urls:
 			try:
-				# Download url index HTML
-				# print "\n========== URL ==========\n"
-				# print "Dowloading url content from \"" + url + "\""
+				# URL
+				print "\n========== URL ==========\n"
+				print "Dowloading url content from \"" + url + "\""
 				os.system("wget -O data/index.html -q " + url)
 				os.system("lynx -dump data/index.html -nolist -verbose > data/index.html.txt")
 
@@ -48,21 +48,22 @@ if __name__ == "__main__":
 				html = myfile.read().replace("\n", "")
 
 			# Title
-			# print "\n========== TITLE ==========\n"
+			print "\n========== TITLE ==========\n"
 			regex = re.compile("<title>(.*?)</title>", re.IGNORECASE|re.DOTALL)
 			title = regex.search(html).group(1)
 			del html
-			# print title
+			print title
 
 			# Body
-			# print "\n========== BODY ==========\n"
+			print "\n========== BODY ==========\n"
 			with open("data/index.html.txt", "r") as myfile:
 				body = myfile.read().replace("\n\n", "\n")
-			# print body
+			print body
 
 			# Add to database
 
 			# Do the process recursively for each url found in HTML (lynx -dump -listonly)
+			# http://www.kompx.com/en/lynx-web-data-extraction.htm
 
 			del url
 			del title
