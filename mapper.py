@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # Authors: Daniel Godoi and Lucas Arakaki
 # Subject: Distributed Systems
