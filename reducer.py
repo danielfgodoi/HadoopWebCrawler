@@ -12,7 +12,7 @@ def crawler(url):
 		# URL
 		print "\n========== URL ==========\n"
 		print "Dowloading url content from \"" + url + "\""
-		os.system("wget --mirror -O data/index.html -q " + url)
+		os.system("wget -O data/index.html -q " + url)
 		os.system("lynx -dump -assume_charset=utf8 -nolist -verbose data/index.html > data/index.html.txt")
 
 	# Exception in case that could not download HTML
