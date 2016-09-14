@@ -12,7 +12,7 @@ def crawler(url):
 		# URL
 		print "\n========== URL ==========\n"
 		print "Dowloading url content from \"" + url + "\""
-		os.system("wget -O data/index.html -q " + url)
+		os.system("wget --mirror -O data/index.html -q " + url)
 		os.system("lynx -dump -assume_charset=utf8 -nolist -verbose data/index.html > data/index.html.txt")
 
 	# Exception in case that could not download HTML
@@ -27,7 +27,10 @@ def crawler(url):
 	# Title
 	print "\n========== TITLE ==========\n"
 	regex = re.compile("<title>(.*?)</title>", re.IGNORECASE|re.DOTALL)
-	title = regex.search(html).group(1)
+	try:
+		title = regex.search(html).group(1)
+	except Exception, e:
+		title = "Could not get website title"
 	del html
 	print title
 
