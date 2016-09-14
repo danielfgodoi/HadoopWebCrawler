@@ -10,8 +10,8 @@ import os
 def crawler(url):
 	try:
 		# URL
-		print "\n========== URL ==========\n"
-		print "Dowloading url content from \"" + url + "\""
+		print "========== URL ==========\n"
+		print url
 		os.system("wget -O data/index.html -q " + url)
 		os.system("lynx -dump -assume_charset=utf8 -nolist -verbose data/index.html > data/index.html.txt")
 
@@ -38,7 +38,7 @@ def crawler(url):
 	print "\n========== BODY ==========\n"
 	with open("data/index.html.txt", "r") as myfile:
 		body = myfile.read().replace("\n\n", "\n")
-	print body
+	print body, "========== END ==========\n"
 
 	# Do the process recursively for each url found in HTML (lynx -dump -listonly)
 	# os.system("lynx -dump -listonly -hiddenlinks=ignore data/index.html | grep -o "http:.*" | sort | uniq > data/urls.txt")
@@ -52,7 +52,7 @@ def main():
 	url = None
 
 	# Create dir to save HTML and TXT files
-	print "Creating dir \"data\""
+	# print "Creating dir \"data\""
 	os.system("mkdir -p data")
 
 	# Read input from STDIN
