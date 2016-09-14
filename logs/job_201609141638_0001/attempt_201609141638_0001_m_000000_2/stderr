@@ -1,0 +1,18 @@
+/bin/sh: module: line 1: syntax error: unexpected end of file
+/bin/sh: error importing function definition for `module'
+/tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/./mapper.py: line 6: import: command not found
+/tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/./mapper.py: line 8: syntax error near unexpected token `('
+/tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/./mapper.py: line 8: `def main():'
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)

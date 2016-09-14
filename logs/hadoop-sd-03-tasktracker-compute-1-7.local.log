@@ -1,0 +1,203 @@
+2016-09-14 16:38:30,271 INFO org.apache.hadoop.mapred.TaskTracker: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting TaskTracker
+STARTUP_MSG:   host = compute-1-7.local/10.1.255.244
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1
+STARTUP_MSG:   build = https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.2 -r 1503152; compiled by 'mattf' on Mon Jul 22 15:23:09 PDT 2013
+STARTUP_MSG:   java = 1.7.0_51
+************************************************************/
+2016-09-14 16:38:30,473 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2016-09-14 16:38:30,547 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source MetricsSystem,sub=Stats registered.
+2016-09-14 16:38:30,548 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2016-09-14 16:38:30,548 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: TaskTracker metrics system started
+2016-09-14 16:38:30,740 INFO org.apache.hadoop.util.NativeCodeLoader: Loaded the native-hadoop library
+2016-09-14 16:38:30,764 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source ugi registered.
+2016-09-14 16:38:30,965 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016-09-14 16:38:31,019 INFO org.apache.hadoop.http.HttpServer: Added global filtersafety (class=org.apache.hadoop.http.HttpServer$QuotingInputFilter)
+2016-09-14 16:38:31,042 INFO org.apache.hadoop.mapred.TaskLogsTruncater: Initializing logs' truncater with mapRetainSize=-1 and reduceRetainSize=-1
+2016-09-14 16:38:31,046 INFO org.apache.hadoop.mapred.TaskTracker: Starting tasktracker with owner as sd-03
+2016-09-14 16:38:31,047 INFO org.apache.hadoop.mapred.TaskTracker: Good mapred local directories are: /tmp/hadoop-sd-03/mapred/local
+2016-09-14 16:38:31,056 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source jvm registered.
+2016-09-14 16:38:31,057 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source TaskTrackerMetrics registered.
+2016-09-14 16:38:31,068 INFO org.apache.hadoop.ipc.Server: Starting SocketReader
+2016-09-14 16:38:31,070 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source RpcDetailedActivityForPort48154 registered.
+2016-09-14 16:38:31,070 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source RpcActivityForPort48154 registered.
+2016-09-14 16:38:31,072 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2016-09-14 16:38:31,072 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 48154: starting
+2016-09-14 16:38:31,073 INFO org.apache.hadoop.ipc.Server: IPC Server handler 0 on 48154: starting
+2016-09-14 16:38:31,073 INFO org.apache.hadoop.ipc.Server: IPC Server handler 1 on 48154: starting
+2016-09-14 16:38:31,074 INFO org.apache.hadoop.ipc.Server: IPC Server handler 2 on 48154: starting
+2016-09-14 16:38:31,074 INFO org.apache.hadoop.ipc.Server: IPC Server handler 3 on 48154: starting
+2016-09-14 16:38:31,074 INFO org.apache.hadoop.mapred.TaskTracker: TaskTracker up at: localhost.localdomain/127.0.0.1:48154
+2016-09-14 16:38:31,074 INFO org.apache.hadoop.mapred.TaskTracker: Starting tracker tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154
+2016-09-14 16:38:31,117 INFO org.apache.hadoop.mapred.TaskTracker: Starting thread: Map-events fetcher for all reduce tasks on tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154
+2016-09-14 16:38:31,137 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2016-09-14 16:38:31,142 INFO org.apache.hadoop.mapred.TaskTracker:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@6b557441
+2016-09-14 16:38:31,146 WARN org.apache.hadoop.mapred.TaskTracker: TaskTracker's totalMemoryAllottedForTasks is -1. TaskMemoryManager is disabled.
+2016-09-14 16:38:31,150 INFO org.apache.hadoop.mapred.IndexCache: IndexCache created with max memory = 10485760
+2016-09-14 16:38:31,156 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source ShuffleServerMetrics registered.
+2016-09-14 16:38:31,159 INFO org.apache.hadoop.http.HttpServer: Port returned by webServer.getConnectors()[0].getLocalPort() before open() is -1. Opening the listener on 50060
+2016-09-14 16:38:31,159 INFO org.apache.hadoop.http.HttpServer: listener.getLocalPort() returned 50060 webServer.getConnectors()[0].getLocalPort() returned 50060
+2016-09-14 16:38:31,159 INFO org.apache.hadoop.http.HttpServer: Jetty bound to port 50060
+2016-09-14 16:38:31,159 INFO org.mortbay.log: jetty-6.1.26
+2016-09-14 16:38:31,453 INFO org.mortbay.log: Started SelectChannelConnector@0.0.0.0:50060
+2016-09-14 16:38:31,453 INFO org.apache.hadoop.mapred.TaskTracker: FILE_CACHE_SIZE for mapOutputServlet set to : 2000
+2016-09-14 16:42:30,345 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000003_0 task's state:UNASSIGNED
+2016-09-14 16:42:30,353 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000003_0 which needs 1 slots
+2016-09-14 16:42:30,353 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 2 and trying to launch attempt_201609141638_0001_m_000003_0 which needs 1 slots
+2016-09-14 16:42:30,662 INFO org.apache.hadoop.mapred.JobLocalizer: Initializing user sd-03 on this TT.
+2016-09-14 16:42:30,806 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_1164471910
+2016-09-14 16:42:30,806 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_1164471910 spawned.
+2016-09-14 16:42:30,809 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000003_0/taskjvm.sh
+2016-09-14 16:42:31,562 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_1164471910 given task: attempt_201609141638_0001_m_000003_0
+2016-09-14 16:42:32,420 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000003_0 0.0% setup
+2016-09-14 16:42:32,423 INFO org.apache.hadoop.mapred.TaskTracker: Task attempt_201609141638_0001_m_000003_0 is done.
+2016-09-14 16:42:32,423 INFO org.apache.hadoop.mapred.TaskTracker: reported output size for attempt_201609141638_0001_m_000003_0  was -1
+2016-09-14 16:42:32,424 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 2
+2016-09-14 16:42:32,484 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000000_0 task's state:UNASSIGNED
+2016-09-14 16:42:32,485 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000001_0 task's state:UNASSIGNED
+2016-09-14 16:42:32,485 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000000_0 which needs 1 slots
+2016-09-14 16:42:32,485 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 2 and trying to launch attempt_201609141638_0001_m_000000_0 which needs 1 slots
+2016-09-14 16:42:32,485 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000001_0 which needs 1 slots
+2016-09-14 16:42:32,485 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 1 and trying to launch attempt_201609141638_0001_m_000001_0 which needs 1 slots
+2016-09-14 16:42:32,490 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_-280907123
+2016-09-14 16:42:32,491 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_-280907123 spawned.
+2016-09-14 16:42:32,491 INFO org.apache.hadoop.mapred.JvmManager: Killing JVM: jvm_201609141638_0001_m_1164471910
+2016-09-14 16:42:32,494 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000001_0/taskjvm.sh
+2016-09-14 16:42:32,495 INFO org.apache.hadoop.util.ProcessTree: Killing process group14670 with signal TERM. Exit code 0
+2016-09-14 16:42:32,495 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_268373861
+2016-09-14 16:42:32,495 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_268373861 spawned.
+2016-09-14 16:42:32,504 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_0/taskjvm.sh
+2016-09-14 16:42:32,512 WARN org.apache.hadoop.mapred.DefaultTaskController: Exit code from task is : 143
+2016-09-14 16:42:32,512 INFO org.apache.hadoop.mapred.DefaultTaskController: Output from DefaultTaskController's launchTask follows:
+2016-09-14 16:42:32,513 INFO org.apache.hadoop.mapred.TaskController: 
+2016-09-14 16:42:32,513 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_1164471910 exited with exit code 143. Number of tasks it ran: 1
+2016-09-14 16:42:32,571 INFO org.apache.hadoop.io.nativeio.NativeIO: Initialized cache for UID to User mapping with a cache timeout of 14400 seconds.
+2016-09-14 16:42:32,571 INFO org.apache.hadoop.io.nativeio.NativeIO: Got UserName sd-03 for UID 507 from the native implementation
+2016-09-14 16:42:33,161 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_-280907123 given task: attempt_201609141638_0001_m_000001_0
+2016-09-14 16:42:33,237 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_268373861 given task: attempt_201609141638_0001_m_000000_0
+2016-09-14 16:42:33,500 INFO org.apache.hadoop.mapred.TaskTracker: Received KillTaskAction for task: attempt_201609141638_0001_m_000003_0
+2016-09-14 16:42:33,500 INFO org.apache.hadoop.mapred.TaskTracker: About to purge task: attempt_201609141638_0001_m_000003_0
+2016-09-14 16:42:33,500 INFO org.apache.hadoop.mapred.IndexCache: Map ID attempt_201609141638_0001_m_000003_0 not found in cache
+2016-09-14 16:42:34,160 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000000_0 0.0% 
+2016-09-14 16:42:34,169 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000001_0 0.0% 
+2016-09-14 16:42:34,196 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_-280907123 exited with exit code 0. Number of tasks it ran: 0
+2016-09-14 16:42:34,289 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_268373861 exited with exit code 0. Number of tasks it ran: 0
+2016-09-14 16:42:37,197 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 1
+2016-09-14 16:42:37,290 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 2
+2016-09-14 16:42:37,347 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000000_1 task's state:UNASSIGNED
+2016-09-14 16:42:37,348 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000001_1 task's state:UNASSIGNED
+2016-09-14 16:42:37,348 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000000_1 which needs 1 slots
+2016-09-14 16:42:37,348 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 2 and trying to launch attempt_201609141638_0001_m_000000_1 which needs 1 slots
+2016-09-14 16:42:37,348 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000001_1 which needs 1 slots
+2016-09-14 16:42:37,349 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 1 and trying to launch attempt_201609141638_0001_m_000001_1 which needs 1 slots
+2016-09-14 16:42:37,356 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_685401773
+2016-09-14 16:42:37,357 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_685401773 spawned.
+2016-09-14 16:42:37,358 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_1090498927
+2016-09-14 16:42:37,359 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_1090498927 spawned.
+2016-09-14 16:42:37,361 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_1/taskjvm.sh
+2016-09-14 16:42:37,362 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000001_1/taskjvm.sh
+2016-09-14 16:42:38,047 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_1090498927 given task: attempt_201609141638_0001_m_000001_1
+2016-09-14 16:42:38,087 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_685401773 given task: attempt_201609141638_0001_m_000000_1
+2016-09-14 16:42:39,048 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000000_1 0.0% 
+2016-09-14 16:42:39,061 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000001_1 0.0% 
+2016-09-14 16:42:39,185 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_685401773 exited with exit code 0. Number of tasks it ran: 0
+2016-09-14 16:42:39,200 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_1090498927 exited with exit code 0. Number of tasks it ran: 0
+2016-09-14 16:42:42,193 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 1
+2016-09-14 16:42:42,200 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000000_2 task's state:UNASSIGNED
+2016-09-14 16:42:42,200 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000000_2 which needs 1 slots
+2016-09-14 16:42:42,200 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 1 and trying to launch attempt_201609141638_0001_m_000000_2 which needs 1 slots
+2016-09-14 16:42:42,201 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 1
+2016-09-14 16:42:42,206 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_1269173239
+2016-09-14 16:42:42,206 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_1269173239 spawned.
+2016-09-14 16:42:42,209 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/taskjvm.sh
+2016-09-14 16:42:42,505 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000001_2 task's state:UNASSIGNED
+2016-09-14 16:42:42,505 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000001_2 which needs 1 slots
+2016-09-14 16:42:42,505 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 1 and trying to launch attempt_201609141638_0001_m_000001_2 which needs 1 slots
+2016-09-14 16:42:42,510 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_582191961
+2016-09-14 16:42:42,510 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_582191961 spawned.
+2016-09-14 16:42:42,512 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000001_2/taskjvm.sh
+2016-09-14 16:42:42,864 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_1269173239 given task: attempt_201609141638_0001_m_000000_2
+2016-09-14 16:42:43,177 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_582191961 given task: attempt_201609141638_0001_m_000001_2
+2016-09-14 16:42:43,871 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000000_2 0.0% 
+2016-09-14 16:42:44,008 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_1269173239 exited with exit code 0. Number of tasks it ran: 0
+2016-09-14 16:42:44,069 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000001_2 0.0% 
+2016-09-14 16:42:44,096 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_582191961 exited with exit code 0. Number of tasks it ran: 0
+2016-09-14 16:42:47,009 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 1
+2016-09-14 16:42:47,057 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000000_3 task's state:UNASSIGNED
+2016-09-14 16:42:47,057 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000000_3 which needs 1 slots
+2016-09-14 16:42:47,057 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 1 and trying to launch attempt_201609141638_0001_m_000000_3 which needs 1 slots
+2016-09-14 16:42:47,066 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_203928217
+2016-09-14 16:42:47,066 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_203928217 spawned.
+2016-09-14 16:42:47,070 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_3/taskjvm.sh
+2016-09-14 16:42:47,097 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 1
+2016-09-14 16:42:47,361 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000001_3 task's state:UNASSIGNED
+2016-09-14 16:42:47,361 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000001_3 which needs 1 slots
+2016-09-14 16:42:47,361 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 1 and trying to launch attempt_201609141638_0001_m_000001_3 which needs 1 slots
+2016-09-14 16:42:47,367 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_-1541674303
+2016-09-14 16:42:47,367 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_-1541674303 spawned.
+2016-09-14 16:42:47,369 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000001_3/taskjvm.sh
+2016-09-14 16:42:47,738 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_203928217 given task: attempt_201609141638_0001_m_000000_3
+2016-09-14 16:42:48,079 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_-1541674303 given task: attempt_201609141638_0001_m_000001_3
+2016-09-14 16:42:48,712 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000000_3 0.0% 
+2016-09-14 16:42:48,849 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_203928217 exited with exit code 0. Number of tasks it ran: 0
+2016-09-14 16:42:49,070 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000001_3 0.0% 
+2016-09-14 16:42:49,217 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_-1541674303 exited with exit code 0. Number of tasks it ran: 0
+2016-09-14 16:42:51,850 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 1
+2016-09-14 16:42:51,915 INFO org.apache.hadoop.mapred.TaskTracker: LaunchTaskAction (registerTask): attempt_201609141638_0001_m_000002_0 task's state:UNASSIGNED
+2016-09-14 16:42:51,915 INFO org.apache.hadoop.mapred.TaskTracker: Trying to launch : attempt_201609141638_0001_m_000002_0 which needs 1 slots
+2016-09-14 16:42:51,915 INFO org.apache.hadoop.mapred.TaskTracker: In TaskLauncher, current free slots : 1 and trying to launch attempt_201609141638_0001_m_000002_0 which needs 1 slots
+2016-09-14 16:42:51,922 INFO org.apache.hadoop.mapred.JvmManager: In JvmRunner constructed JVM ID: jvm_201609141638_0001_m_-2109509250
+2016-09-14 16:42:51,922 INFO org.apache.hadoop.mapred.JvmManager: JVM Runner jvm_201609141638_0001_m_-2109509250 spawned.
+2016-09-14 16:42:51,925 INFO org.apache.hadoop.mapred.TaskController: Writing commands to /tmp/hadoop-sd-03/mapred/local/ttprivate/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000002_0/taskjvm.sh
+2016-09-14 16:42:52,218 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 1
+2016-09-14 16:42:52,580 INFO org.apache.hadoop.mapred.TaskTracker: JVM with ID: jvm_201609141638_0001_m_-2109509250 given task: attempt_201609141638_0001_m_000002_0
+2016-09-14 16:42:53,227 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000002_0 0.0% 
+2016-09-14 16:42:53,298 INFO org.apache.hadoop.mapred.TaskTracker: attempt_201609141638_0001_m_000002_0 0.0% cleanup
+2016-09-14 16:42:53,299 INFO org.apache.hadoop.mapred.TaskTracker: Task attempt_201609141638_0001_m_000002_0 is done.
+2016-09-14 16:42:53,300 INFO org.apache.hadoop.mapred.TaskTracker: reported output size for attempt_201609141638_0001_m_000002_0  was -1
+2016-09-14 16:42:53,300 INFO org.apache.hadoop.mapred.TaskTracker: addFreeSlot : current free slots : 2
+2016-09-14 16:42:53,490 INFO org.apache.hadoop.mapred.JvmManager: JVM : jvm_201609141638_0001_m_-2109509250 exited with exit code 0. Number of tasks it ran: 1
+2016-09-14 16:42:53,502 INFO org.apache.hadoop.mapred.TaskTracker: Received KillTaskAction for task: attempt_201609141638_0001_m_000000_3
+2016-09-14 16:42:53,503 INFO org.apache.hadoop.mapred.TaskTracker: Received KillTaskAction for task: attempt_201609141638_0001_m_000001_3
+2016-09-14 16:42:53,503 INFO org.apache.hadoop.mapred.TaskTracker: Received 'KillJobAction' for job: job_201609141638_0001
+2016-09-14 16:42:53,503 INFO org.apache.hadoop.mapred.IndexCache: Map ID attempt_201609141638_0001_m_000002_0 not found in cache
+2016-09-14 16:42:53,504 INFO org.apache.hadoop.mapred.UserLogCleaner: Adding job_201609141638_0001 for user-log deletion with retainTimeStamp:1473972173504
+2016-09-14 16:52:56,447 ERROR org.apache.hadoop.mapred.TaskTracker: Caught exception: java.io.IOException: Call to compute-1-7/10.1.255.244:53101 failed on local exception: java.io.IOException: Connection reset by peer
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1150)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1118)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at org.apache.hadoop.mapred.$Proxy5.heartbeat(Unknown Source)
+	at org.apache.hadoop.mapred.TaskTracker.transmitHeartBeat(TaskTracker.java:2030)
+	at org.apache.hadoop.mapred.TaskTracker.offerService(TaskTracker.java:1824)
+	at org.apache.hadoop.mapred.TaskTracker.run(TaskTracker.java:2676)
+	at org.apache.hadoop.mapred.TaskTracker.main(TaskTracker.java:3939)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.hadoop.net.SocketInputStream$Reader.performIO(SocketInputStream.java:55)
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:142)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at org.apache.hadoop.ipc.Client$Connection$PingInputStream.read(Client.java:364)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.hadoop.ipc.Client$Connection.receiveResponse(Client.java:845)
+	at org.apache.hadoop.ipc.Client$Connection.run(Client.java:790)
+
+2016-09-14 16:52:56,447 INFO org.apache.hadoop.mapred.TaskTracker: Resending 'status' to 'compute-1-7' with reponseId '2856
+2016-09-14 16:52:57,449 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: compute-1-7/10.1.255.244:53101. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2016-09-14 16:52:58,450 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: compute-1-7/10.1.255.244:53101. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2016-09-14 16:52:59,450 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: compute-1-7/10.1.255.244:53101. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2016-09-14 16:53:00,451 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: compute-1-7/10.1.255.244:53101. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2016-09-14 16:53:01,452 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: compute-1-7/10.1.255.244:53101. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2016-09-14 16:53:01,532 INFO org.apache.hadoop.mapred.TaskTracker: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down TaskTracker at compute-1-7.local/10.1.255.244
+************************************************************/

@@ -1,0 +1,55 @@
+2016-09-14 16:38:28,031 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = compute-1-7.local/10.1.255.244
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1
+STARTUP_MSG:   build = https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.2 -r 1503152; compiled by 'mattf' on Mon Jul 22 15:23:09 PDT 2013
+STARTUP_MSG:   java = 1.7.0_51
+************************************************************/
+2016-09-14 16:38:28,137 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2016-09-14 16:38:28,628 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016-09-14 16:38:28,680 INFO org.apache.hadoop.http.HttpServer: Added global filtersafety (class=org.apache.hadoop.http.HttpServer$QuotingInputFilter)
+2016-09-14 16:38:28,683 INFO org.apache.hadoop.http.HttpServer: Port returned by webServer.getConnectors()[0].getLocalPort() before open() is -1. Opening the listener on 50090
+2016-09-14 16:38:28,684 INFO org.apache.hadoop.http.HttpServer: listener.getLocalPort() returned 50090 webServer.getConnectors()[0].getLocalPort() returned 50090
+2016-09-14 16:38:28,684 INFO org.apache.hadoop.http.HttpServer: Jetty bound to port 50090
+2016-09-14 16:38:28,684 INFO org.mortbay.log: jetty-6.1.26
+2016-09-14 16:38:29,038 INFO org.mortbay.log: Started SelectChannelConnector@0.0.0.0:50090
+2016-09-14 16:38:29,038 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
+2016-09-14 16:38:29,038 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Secondary Web-server up at: 0.0.0.0:50090
+2016-09-14 16:38:29,038 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
+2016-09-14 16:38:29,039 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :67108864 bytes (65536 KB)
+2016-09-14 16:43:29,144 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getimage=1
+2016-09-14 16:43:29,295 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file fsimage size 111 bytes.
+2016-09-14 16:43:29,296 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getedit=1
+2016-09-14 16:43:29,297 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file edits size 7958 bytes.
+2016-09-14 16:43:29,299 INFO org.apache.hadoop.hdfs.util.GSet: Computing capacity for map BlocksMap
+2016-09-14 16:43:29,299 INFO org.apache.hadoop.hdfs.util.GSet: VM type       = 64-bit
+2016-09-14 16:43:29,299 INFO org.apache.hadoop.hdfs.util.GSet: 2.0% max memory = 932184064
+2016-09-14 16:43:29,299 INFO org.apache.hadoop.hdfs.util.GSet: capacity      = 2^21 = 2097152 entries
+2016-09-14 16:43:29,300 INFO org.apache.hadoop.hdfs.util.GSet: recommended=2097152, actual=2097152
+2016-09-14 16:43:29,306 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner=sd-03
+2016-09-14 16:43:29,306 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup=supergroup
+2016-09-14 16:43:29,306 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled=true
+2016-09-14 16:43:29,312 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: dfs.block.invalidate.limit=100
+2016-09-14 16:43:29,312 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+2016-09-14 16:43:29,318 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: dfs.namenode.edits.toleration.length = -1
+2016-09-14 16:43:29,318 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occuring more than 10 times 
+2016-09-14 16:43:29,502 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files = 1
+2016-09-14 16:43:29,503 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files under construction = 0
+2016-09-14 16:43:29,504 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Start loading edits file /tmp/hadoop-sd-03/dfs/namesecondary/current/edits
+2016-09-14 16:43:29,525 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: EOF of /tmp/hadoop-sd-03/dfs/namesecondary/current/edits, reached end of edit log Number of transactions found: 69.  Bytes read: 7958
+2016-09-14 16:43:29,525 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edits file /tmp/hadoop-sd-03/dfs/namesecondary/current/edits of size 7958 edits # 69 loaded in 0 seconds.
+2016-09-14 16:43:29,525 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2016-09-14 16:43:29,560 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=7958, editlog=/tmp/hadoop-sd-03/dfs/namesecondary/current/edits
+2016-09-14 16:43:29,561 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 7958, editlog=/tmp/hadoop-sd-03/dfs/namesecondary/current/edits
+2016-09-14 16:43:29,563 INFO org.apache.hadoop.hdfs.server.common.Storage: Image file /tmp/hadoop-sd-03/dfs/namesecondary/current/fsimage of size 1826 bytes saved in 0 seconds.
+2016-09-14 16:43:29,610 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/tmp/hadoop-sd-03/dfs/namesecondary/current/edits
+2016-09-14 16:43:29,611 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/tmp/hadoop-sd-03/dfs/namesecondary/current/edits
+2016-09-14 16:43:29,839 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Posted URL 0.0.0.0:50070putimage=1&port=50090&machine=0.0.0.0&token=-41:1443589957:0:1473885809000:1473885506075&newChecksum=5e7c77bc6b536f5ced1df0dc1ed53e63
+2016-09-14 16:43:29,839 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?putimage=1&port=50090&machine=0.0.0.0&token=-41:1443589957:0:1473885809000:1473885506075&newChecksum=5e7c77bc6b536f5ced1df0dc1ed53e63
+2016-09-14 16:43:30,067 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 1826
+2016-09-14 16:53:17,386 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at compute-1-7.local/10.1.255.244
+************************************************************/

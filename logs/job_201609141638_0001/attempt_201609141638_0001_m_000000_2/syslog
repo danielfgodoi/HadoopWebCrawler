@@ -1,0 +1,56 @@
+2016-09-14 16:42:43,049 INFO org.apache.hadoop.util.NativeCodeLoader: Loaded the native-hadoop library
+2016-09-14 16:42:43,245 INFO org.apache.hadoop.filecache.TrackerDistributedCacheManager: Creating symlink: /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/jars/.job.jar.crc <- /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/.job.jar.crc
+2016-09-14 16:42:43,250 INFO org.apache.hadoop.filecache.TrackerDistributedCacheManager: Creating symlink: /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/jars/org <- /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/org
+2016-09-14 16:42:43,251 INFO org.apache.hadoop.filecache.TrackerDistributedCacheManager: Creating symlink: /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/jars/mapper.py <- /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/mapper.py
+2016-09-14 16:42:43,252 INFO org.apache.hadoop.filecache.TrackerDistributedCacheManager: Creating symlink: /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/jars/reducer.py <- /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/reducer.py
+2016-09-14 16:42:43,253 INFO org.apache.hadoop.filecache.TrackerDistributedCacheManager: Creating symlink: /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/jars/META-INF <- /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/META-INF
+2016-09-14 16:42:43,254 INFO org.apache.hadoop.filecache.TrackerDistributedCacheManager: Creating symlink: /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/jars/job.jar <- /tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/job.jar
+2016-09-14 16:42:43,559 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2016-09-14 16:42:43,562 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@27d54837
+2016-09-14 16:42:43,681 INFO org.apache.hadoop.mapred.MapTask: Processing split: hdfs://compute-1-7:53100/user/sd-03/input/input.txt:0+25
+2016-09-14 16:42:43,697 WARN org.apache.hadoop.io.compress.snappy.LoadSnappy: Snappy native library not loaded
+2016-09-14 16:42:43,702 INFO org.apache.hadoop.mapred.MapTask: numReduceTasks: 1
+2016-09-14 16:42:43,711 INFO org.apache.hadoop.mapred.MapTask: io.sort.mb = 100
+2016-09-14 16:42:43,743 INFO org.apache.hadoop.mapred.MapTask: data buffer = 79691776/99614720
+2016-09-14 16:42:43,743 INFO org.apache.hadoop.mapred.MapTask: record buffer = 262144/327680
+2016-09-14 16:42:43,759 INFO org.apache.hadoop.streaming.PipeMapRed: PipeMapRed exec [/tmp/hadoop-sd-03/mapred/local/taskTracker/sd-03/jobcache/job_201609141638_0001/attempt_201609141638_0001_m_000000_2/work/./mapper.py]
+2016-09-14 16:42:43,782 INFO org.apache.hadoop.streaming.PipeMapRed: MRErrorThread done
+2016-09-14 16:42:43,786 INFO org.apache.hadoop.streaming.PipeMapRed: R/W/S=1/0/0 in:NA [rec/s] out:NA [rec/s]
+2016-09-14 16:42:43,787 WARN org.apache.hadoop.streaming.PipeMapRed: java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:434)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:141)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:569)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:43,787 INFO org.apache.hadoop.streaming.PipeMapRed: PipeMapRed failed!
+2016-09-14 16:42:43,825 INFO org.apache.hadoop.mapred.TaskLogsTruncater: Initializing logs' truncater with mapRetainSize=-1 and reduceRetainSize=-1
+2016-09-14 16:42:43,865 INFO org.apache.hadoop.io.nativeio.NativeIO: Initialized cache for UID to User mapping with a cache timeout of 14400 seconds.
+2016-09-14 16:42:43,865 INFO org.apache.hadoop.io.nativeio.NativeIO: Got UserName sd-03 for UID 507 from the native implementation
+2016-09-14 16:42:43,868 WARN org.apache.hadoop.mapred.Child: Error running child
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+2016-09-14 16:42:43,872 INFO org.apache.hadoop.mapred.Task: Runnning cleanup for the task

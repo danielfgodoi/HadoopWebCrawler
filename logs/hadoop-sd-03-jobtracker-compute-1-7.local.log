@@ -1,0 +1,241 @@
+2016-09-14 16:38:29,192 INFO org.apache.hadoop.mapred.JobTracker: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting JobTracker
+STARTUP_MSG:   host = compute-1-7.local/10.1.255.244
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1
+STARTUP_MSG:   build = https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.2 -r 1503152; compiled by 'mattf' on Mon Jul 22 15:23:09 PDT 2013
+STARTUP_MSG:   java = 1.7.0_51
+************************************************************/
+2016-09-14 16:38:29,323 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2016-09-14 16:38:29,334 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source MetricsSystem,sub=Stats registered.
+2016-09-14 16:38:29,335 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2016-09-14 16:38:29,335 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: JobTracker metrics system started
+2016-09-14 16:38:29,468 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source QueueMetrics,q=default registered.
+2016-09-14 16:38:29,688 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source ugi registered.
+2016-09-14 16:38:29,689 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2016-09-14 16:38:29,690 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2016-09-14 16:38:29,690 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2016-09-14 16:38:29,691 INFO org.apache.hadoop.mapred.JobTracker: Scheduler configured with (memSizeForMapSlotOnJT, memSizeForReduceSlotOnJT, limitMaxMemForMapTasks, limitMaxMemForReduceTasks) (-1, -1, -1, -1)
+2016-09-14 16:38:29,691 INFO org.apache.hadoop.util.HostsFileReader: Refreshing hosts (include/exclude) list
+2016-09-14 16:38:29,699 INFO org.apache.hadoop.mapred.JobTracker: Starting jobtracker with owner as sd-03
+2016-09-14 16:38:29,715 INFO org.apache.hadoop.ipc.Server: Starting SocketReader
+2016-09-14 16:38:29,717 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source RpcDetailedActivityForPort53101 registered.
+2016-09-14 16:38:29,717 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source RpcActivityForPort53101 registered.
+2016-09-14 16:38:29,760 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016-09-14 16:38:29,813 INFO org.apache.hadoop.http.HttpServer: Added global filtersafety (class=org.apache.hadoop.http.HttpServer$QuotingInputFilter)
+2016-09-14 16:38:29,816 INFO org.apache.hadoop.http.HttpServer: Port returned by webServer.getConnectors()[0].getLocalPort() before open() is -1. Opening the listener on 50030
+2016-09-14 16:38:29,818 INFO org.apache.hadoop.http.HttpServer: listener.getLocalPort() returned 50030 webServer.getConnectors()[0].getLocalPort() returned 50030
+2016-09-14 16:38:29,818 INFO org.apache.hadoop.http.HttpServer: Jetty bound to port 50030
+2016-09-14 16:38:29,818 INFO org.mortbay.log: jetty-6.1.26
+2016-09-14 16:38:30,130 INFO org.mortbay.log: Started SelectChannelConnector@0.0.0.0:50030
+2016-09-14 16:38:30,135 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source jvm registered.
+2016-09-14 16:38:30,135 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source JobTrackerMetrics registered.
+2016-09-14 16:38:30,148 INFO org.apache.hadoop.mapred.JobTracker: JobTracker up at: 53101
+2016-09-14 16:38:30,148 INFO org.apache.hadoop.mapred.JobTracker: JobTracker webserver: 50030
+2016-09-14 16:38:30,172 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2016-09-14 16:38:30,172 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 0 on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 1 on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 2 on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 3 on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 4 on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 5 on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 6 on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 7 on 53101: starting
+2016-09-14 16:38:30,173 INFO org.apache.hadoop.ipc.Server: IPC Server handler 8 on 53101: starting
+2016-09-14 16:38:30,174 INFO org.apache.hadoop.ipc.Server: IPC Server handler 9 on 53101: starting
+2016-09-14 16:38:30,174 INFO org.apache.hadoop.mapred.JobTracker: Setting safe mode to true. Requested by : sd-03
+2016-09-14 16:38:30,313 INFO org.apache.hadoop.mapred.JobTracker: Setting safe mode to false. Requested by : sd-03
+2016-09-14 16:38:30,325 INFO org.apache.hadoop.util.NativeCodeLoader: Loaded the native-hadoop library
+2016-09-14 16:38:30,343 INFO org.apache.hadoop.mapred.JobTracker: Cleaning up the system directory
+2016-09-14 16:38:30,410 INFO org.apache.hadoop.mapred.JobHistory: Creating DONE folder at file:/home/sd-03/hadoop/logs/history/done
+2016-09-14 16:38:30,422 INFO org.apache.hadoop.mapred.JobHistory: Job History MaxAge is 2592000000 ms (30.00 days), Cleanup Frequency is 86400000 ms (1.00 days)
+2016-09-14 16:38:30,424 INFO org.apache.hadoop.mapred.JobTracker: History server being initialized in embedded mode
+2016-09-14 16:38:30,428 INFO org.apache.hadoop.mapred.JobHistoryServer: Started job history server at: localhost:50030
+2016-09-14 16:38:30,428 INFO org.apache.hadoop.mapred.JobTracker: Job History Server web address: localhost:50030
+2016-09-14 16:38:30,429 INFO org.apache.hadoop.mapred.CompletedJobStatusStore: Completed job store is inactive
+2016-09-14 16:38:30,566 INFO org.apache.hadoop.mapred.JobTracker: Starting the recovery process for 0 jobs ...
+2016-09-14 16:38:30,566 INFO org.apache.hadoop.mapred.JobTracker: Recovery done! Recoverd 0 of 0 jobs.
+2016-09-14 16:38:30,566 INFO org.apache.hadoop.mapred.JobTracker: Recovery Duration (ms):0
+2016-09-14 16:38:30,566 INFO org.apache.hadoop.mapred.JobTracker: Refreshing hosts information
+2016-09-14 16:38:30,590 INFO org.apache.hadoop.util.HostsFileReader: Setting the includes file to 
+2016-09-14 16:38:30,590 INFO org.apache.hadoop.util.HostsFileReader: Setting the excludes file to 
+2016-09-14 16:38:30,590 INFO org.apache.hadoop.util.HostsFileReader: Refreshing hosts (include/exclude) list
+2016-09-14 16:38:30,590 INFO org.apache.hadoop.mapred.JobTracker: Decommissioning 0 nodes
+2016-09-14 16:38:30,590 INFO org.apache.hadoop.mapred.JobTracker: Starting RUNNING
+2016-09-14 16:38:31,868 INFO org.apache.hadoop.net.NetworkTopology: Adding a new node: /default-rack/compute-1-7.local
+2016-09-14 16:38:31,870 INFO org.apache.hadoop.mapred.JobTracker: Adding tracker tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154 to host compute-1-7.local
+2016-09-14 16:42:29,660 INFO org.apache.hadoop.mapred.JobTracker: jobToken generated and stored with users keys in /tmp/hadoop-sd-03/mapred/system/job_201609141638_0001/jobToken
+2016-09-14 16:42:29,760 INFO org.apache.hadoop.mapred.JobInProgress: job_201609141638_0001: nMaps=2 nReduces=1 max=-1
+2016-09-14 16:42:29,762 INFO org.apache.hadoop.mapred.JobTracker: Job job_201609141638_0001 added successfully for user 'sd-03' to queue 'default'
+2016-09-14 16:42:29,763 INFO org.apache.hadoop.mapred.JobTracker: Initializing job_201609141638_0001
+2016-09-14 16:42:29,763 INFO org.apache.hadoop.mapred.AuditLogger: USER=sd-03	IP=10.1.255.244	OPERATION=SUBMIT_JOB	TARGET=job_201609141638_0001	RESULT=SUCCESS
+2016-09-14 16:42:29,764 INFO org.apache.hadoop.mapred.JobInProgress: Initializing job_201609141638_0001
+2016-09-14 16:42:30,047 INFO org.apache.hadoop.mapred.JobInProgress: Input size for job job_201609141638_0001 = 50. Number of splits = 2
+2016-09-14 16:42:30,047 INFO org.apache.hadoop.mapred.JobInProgress: tip:task_201609141638_0001_m_000000 has split on node:/default-rack/compute-1-7.local
+2016-09-14 16:42:30,047 INFO org.apache.hadoop.mapred.JobInProgress: tip:task_201609141638_0001_m_000001 has split on node:/default-rack/compute-1-7.local
+2016-09-14 16:42:30,047 INFO org.apache.hadoop.mapred.JobInProgress: job_201609141638_0001 LOCALITY_WAIT_FACTOR=1.0
+2016-09-14 16:42:30,048 INFO org.apache.hadoop.mapred.JobInProgress: Job job_201609141638_0001 initialized successfully with 2 map tasks and 1 reduce tasks.
+2016-09-14 16:42:30,303 INFO org.apache.hadoop.mapred.JobTracker: Adding task (JOB_SETUP) 'attempt_201609141638_0001_m_000003_0' to tip task_201609141638_0001_m_000003, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:32,468 INFO org.apache.hadoop.mapred.JobInProgress: Task 'attempt_201609141638_0001_m_000003_0' has completed task_201609141638_0001_m_000003 successfully.
+2016-09-14 16:42:32,480 INFO org.apache.hadoop.mapred.JobTracker: Adding task (MAP) 'attempt_201609141638_0001_m_000000_0' to tip task_201609141638_0001_m_000000, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:32,481 INFO org.apache.hadoop.mapred.JobInProgress: Choosing data-local task task_201609141638_0001_m_000000
+2016-09-14 16:42:32,482 INFO org.apache.hadoop.mapred.JobTracker: Adding task (MAP) 'attempt_201609141638_0001_m_000001_0' to tip task_201609141638_0001_m_000001, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:32,482 INFO org.apache.hadoop.mapred.JobInProgress: Choosing data-local task task_201609141638_0001_m_000001
+2016-09-14 16:42:34,301 INFO org.apache.hadoop.mapred.TaskInProgress: Error from attempt_201609141638_0001_m_000000_0: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:34,301 INFO org.apache.hadoop.mapred.TaskInProgress: Error from attempt_201609141638_0001_m_000001_0: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:37,341 INFO org.apache.hadoop.mapred.JobInProgress: Choosing a failed task task_201609141638_0001_m_000000
+2016-09-14 16:42:37,342 INFO org.apache.hadoop.mapred.JobTracker: Adding task (MAP) 'attempt_201609141638_0001_m_000000_1' to tip task_201609141638_0001_m_000000, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:37,343 INFO org.apache.hadoop.mapred.JobInProgress: Choosing data-local task task_201609141638_0001_m_000000
+2016-09-14 16:42:37,343 INFO org.apache.hadoop.mapred.JobInProgress: Choosing a failed task task_201609141638_0001_m_000001
+2016-09-14 16:42:37,344 INFO org.apache.hadoop.mapred.JobTracker: Adding task (MAP) 'attempt_201609141638_0001_m_000001_1' to tip task_201609141638_0001_m_000001, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:37,344 INFO org.apache.hadoop.mapred.JobInProgress: Choosing data-local task task_201609141638_0001_m_000001
+2016-09-14 16:42:37,344 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000000_0'
+2016-09-14 16:42:37,344 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000001_0'
+2016-09-14 16:42:39,162 INFO org.apache.hadoop.mapred.TaskInProgress: Error from attempt_201609141638_0001_m_000000_1: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:39,163 INFO org.apache.hadoop.mapred.TaskInProgress: Error from attempt_201609141638_0001_m_000001_1: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:42,198 INFO org.apache.hadoop.mapred.JobInProgress: Choosing a failed task task_201609141638_0001_m_000000
+2016-09-14 16:42:42,199 INFO org.apache.hadoop.mapred.JobTracker: Adding task (MAP) 'attempt_201609141638_0001_m_000000_2' to tip task_201609141638_0001_m_000000, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:42,199 INFO org.apache.hadoop.mapred.JobInProgress: Choosing data-local task task_201609141638_0001_m_000000
+2016-09-14 16:42:42,199 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000000_1'
+2016-09-14 16:42:42,503 INFO org.apache.hadoop.mapred.JobInProgress: TaskTracker at 'compute-1-7.local' turned 'flaky'
+2016-09-14 16:42:42,503 INFO org.apache.hadoop.mapred.JobInProgress: Choosing a failed task task_201609141638_0001_m_000001
+2016-09-14 16:42:42,503 INFO org.apache.hadoop.mapred.JobTracker: Adding task (MAP) 'attempt_201609141638_0001_m_000001_2' to tip task_201609141638_0001_m_000001, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:42,504 INFO org.apache.hadoop.mapred.JobInProgress: Choosing data-local task task_201609141638_0001_m_000001
+2016-09-14 16:42:42,504 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000001_1'
+2016-09-14 16:42:44,018 INFO org.apache.hadoop.mapred.TaskInProgress: Error from attempt_201609141638_0001_m_000000_2: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:44,322 INFO org.apache.hadoop.mapred.TaskInProgress: Error from attempt_201609141638_0001_m_000001_2: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:47,054 INFO org.apache.hadoop.mapred.JobInProgress: Choosing a failed task task_201609141638_0001_m_000000
+2016-09-14 16:42:47,054 INFO org.apache.hadoop.mapred.JobTracker: Adding task (MAP) 'attempt_201609141638_0001_m_000000_3' to tip task_201609141638_0001_m_000000, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:47,055 INFO org.apache.hadoop.mapred.JobInProgress: Choosing data-local task task_201609141638_0001_m_000000
+2016-09-14 16:42:47,055 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000000_2'
+2016-09-14 16:42:47,359 INFO org.apache.hadoop.mapred.JobInProgress: Choosing a failed task task_201609141638_0001_m_000001
+2016-09-14 16:42:47,359 INFO org.apache.hadoop.mapred.JobTracker: Adding task (MAP) 'attempt_201609141638_0001_m_000001_3' to tip task_201609141638_0001_m_000001, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:47,359 INFO org.apache.hadoop.mapred.JobInProgress: Choosing data-local task task_201609141638_0001_m_000001
+2016-09-14 16:42:47,360 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000001_2'
+2016-09-14 16:42:48,873 INFO org.apache.hadoop.mapred.TaskInProgress: Error from attempt_201609141638_0001_m_000000_3: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:49,176 INFO org.apache.hadoop.mapred.TaskInProgress: Error from attempt_201609141638_0001_m_000001_3: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:362)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:576)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:135)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:57)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:36)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:430)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)
+
+2016-09-14 16:42:51,907 INFO org.apache.hadoop.mapred.TaskInProgress: TaskInProgress task_201609141638_0001_m_000000 has failed 4 times.
+2016-09-14 16:42:51,909 INFO org.apache.hadoop.mapred.JobInProgress: Aborting job job_201609141638_0001
+2016-09-14 16:42:51,910 INFO org.apache.hadoop.mapred.JobInProgress: Killing job 'job_201609141638_0001'
+2016-09-14 16:42:51,911 INFO org.apache.hadoop.mapred.JobTracker: Adding task (JOB_CLEANUP) 'attempt_201609141638_0001_m_000002_0' to tip task_201609141638_0001_m_000002, for tracker 'tracker_compute-1-7.local:localhost.localdomain/127.0.0.1:48154'
+2016-09-14 16:42:51,912 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000000_3'
+2016-09-14 16:42:52,520 INFO org.apache.hadoop.mapred.TaskInProgress: TaskInProgress task_201609141638_0001_m_000001 has failed 4 times.
+2016-09-14 16:42:52,522 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000001_3'
+2016-09-14 16:42:53,429 INFO org.apache.hadoop.mapred.JobInProgress: Task 'attempt_201609141638_0001_m_000002_0' has completed task_201609141638_0001_m_000002 successfully.
+2016-09-14 16:42:53,433 INFO org.apache.hadoop.mapred.JobInProgress$JobSummary: jobId=job_201609141638_0001,submitTime=1473885749673,launchTime=1473885750047,firstMapTaskLaunchTime=1473885752480,firstJobSetupTaskLaunchTime=1473885750276,firstJobCleanupTaskLaunchTime=1473885771911,finishTime=1473885773431,numMaps=2,numSlotsPerMap=1,numReduces=1,numSlotsPerReduce=1,user=sd-03,queue=default,status=FAILED,mapSlotSeconds=41,reduceSlotsSeconds=0,clusterMapCapacity=2,clusterReduceCapacity=2,jobName=streamjob3541339638859237111.jar
+2016-09-14 16:42:53,456 INFO org.apache.hadoop.mapred.JobHistory: Creating DONE subfolder at file:/home/sd-03/hadoop/logs/history/done/version-1/compute-1-7_1473885509720_/2016/09/14/000000
+2016-09-14 16:42:53,459 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000002_0'
+2016-09-14 16:42:53,460 INFO org.apache.hadoop.mapred.JobTracker: Removing task 'attempt_201609141638_0001_m_000003_0'
+2016-09-14 16:42:53,462 INFO org.apache.hadoop.mapred.JobHistory: Moving file:/home/sd-03/hadoop/logs/history/job_201609141638_0001_1473885749673_sd-03_streamjob3541339638859237111.jar to file:/home/sd-03/hadoop/logs/history/done/version-1/compute-1-7_1473885509720_/2016/09/14/000000
+2016-09-14 16:42:53,482 INFO org.apache.hadoop.mapred.JobHistory: Moving file:/home/sd-03/hadoop/logs/history/job_201609141638_0001_conf.xml to file:/home/sd-03/hadoop/logs/history/done/version-1/compute-1-7_1473885509720_/2016/09/14/000000
+2016-09-14 16:42:53,871 INFO org.apache.hadoop.mapred.JobTracker: Killing job job_201609141638_0001
+2016-09-14 16:52:56,123 INFO org.apache.hadoop.mapred.JobTracker: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down JobTracker at compute-1-7.local/10.1.255.244
+************************************************************/
