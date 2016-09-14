@@ -11,38 +11,49 @@ import os
 def crawler(url):
 	try:
 		# URL
-		print "========== URL ==========\n"
-		print url
+		# print "========== URL ==========\n"
+		# print url
 		os.system("wget -O data/index.html -q " + url)
 		os.system("lynx -dump -assume_charset=utf8 -nolist -verbose data/index.html > data/index.html.txt")
 
 	# Exception in case that could not download HTML
 	except Exception, e:
 		raise e
-		print "Could not create dir and/or download file"
+		# print "Could not create dir and/or download file"
 
 	# Parse HTML file to extract title
 	with open("data/index.html", "r") as myfile:
 		html = myfile.read().replace("\n", "")
 
 	# Title
-	print "\n========== TITLE ==========\n"
+	# print "\n========== TITLE ==========\n"
 	regex = re.compile("<title>(.*?)</title>", re.IGNORECASE|re.DOTALL)
 	try:
 		title = regex.search(html).group(1)
 	except Exception, e:
-		title = "Could not get website title"
+		title = "Could not get website title - the link may be wrongly typed"
+
 	del html
-	print title
+	# print title
 
 	# Body
-	print "\n========== BODY ==========\n"
+	# print "\n========== BODY ==========\n"
 	with open("data/index.html.txt", "r") as myfile:
 		body = myfile.read().replace("\n\n", "\n")
-	print body, "========== END ==========\n"
+		# TRY TO REMOVE WHITESPACES WITH strip() FUNCTION
+
+	# print body
+	# print "\n========== END ==========\n"
 
 	# Do the process recursively for each url found in HTML (lynx -dump -listonly)
 	# os.system("lynx -dump -listonly -hiddenlinks=ignore data/index.html | grep -o "http:.*" | sort | uniq > data/urls.txt")
+	# with open("data/urls.txt") as myfile:
+	# 	mylist = myfile.read()
+	# 	urls = mylist.split()
+
+	print "> ", url
+	print "> ", title
+	print "> ", body, "\n"
 
 	del url
 	del title
