@@ -14,7 +14,7 @@ def crawler(url):
 		# print "========== URL ==========\n"
 		# print url
 		os.system("wget -O data/index.html -q " + url)
-		os.system("lynx -dump -assume_charset=utf8 -nolist -verbose data/index.html > data/index.html.txt")
+		# os.system("lynxs -dump -assume_charset=utf8 -nolist -verbose data/index.html > data/index.html.txt")
 
 	# Exception in case that could not download HTML
 	except Exception, e:
@@ -33,27 +33,26 @@ def crawler(url):
 	except Exception, e:
 		title = "Could not get website title - the link may be wrongly typed"
 
-	del html
 	# print title
 
-	# Body
+	# Body with LYNX
 	# print "\n========== BODY ==========\n"
-	with open("data/index.html.txt", "r") as myfile:
-		body = myfile.read().replace("\n\n", "\n")
-		# TRY TO REMOVE WHITESPACES WITH strip() FUNCTION
-
+	# with open("data/index.html.txt", "r") as myfile:
+	# 	body = myfile.read()
+	# 	body = " ".join(body.split())
 	# print body
-	# print "\n========== END ==========\n"
 
-	# Do the process recursively for each url found in HTML (lynx -dump -listonly)
-	# os.system("lynx -dump -listonly -hiddenlinks=ignore data/index.html | grep -o "http:.*" | sort | uniq > data/urls.txt")
-	# with open("data/urls.txt") as myfile:
-	# 	mylist = myfile.read()
-	# 	urls = mylist.split()
+	# Body without using LYNX
+	regex = re.compile('<.*?>')
+	htmlWithouTags = re.sub(regex, ' ', html)
+	body = " ".join(htmlWithouTags.split())
+	del html	
 
-	print "> ", url
-	print "> ", title
-	print "> ", body, "\n"
+	print ">", url
+	print ">", title
+	print "> -body-"
+	print "\n\n\n"
+	# print ">", body, "\n"
 
 	del url
 	del title
