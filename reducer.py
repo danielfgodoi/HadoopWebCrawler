@@ -50,9 +50,9 @@ def crawler(url):
 
 	print ">", url
 	print ">", title
-	print "> -body-"
+	print "> ---body goes here---"
+	# print ">", body
 	print "\n\n\n"
-	# print ">", body, "\n"
 
 	del url
 	del title

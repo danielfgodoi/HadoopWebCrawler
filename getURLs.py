@@ -12,7 +12,10 @@ import os
 def main():
 	links = []
 	os.system("mkdir -p data")
-	os.system("rm data/urls.txt")
+	try:
+		os.system("rm data/urls.txt")
+	except:
+		pass
 	for line in sys.stdin:
 		url = line.strip()
 		os.system("echo " + url + " >> data/urls.txt")
